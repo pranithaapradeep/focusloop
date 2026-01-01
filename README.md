@@ -14,7 +14,7 @@ A free web application that allows users to loop YouTube videos for focused lear
 
 ## 🚀 Live Demo
 
-[Open FocusLoop](https://your-username.github.io/focusloop)
+[Open FocusLoop](https://pranithaapradeep.github.io/focusloop)
 
 ## 🛠️ Technologies Used
 
