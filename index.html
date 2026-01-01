@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusLoop - YouTube Video Looper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 FocusLoop</h1>
+            <p>Loop YouTube videos for focused learning</p>
+        </header>
+
+        <main>
+            <!-- Video URL Input -->
+            <section class="url-section">
+                <input type="text" id="videoUrl" placeholder="Paste YouTube video URL here..." />
+                <button id="loadVideo">Load Video</button>
+            </section>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error hidden"></div>
+
+            <!-- Video Player -->
+            <div id="videoContainer" class="video-container hidden">
+                <div id="player"></div>
+            </div>
+
+            <!-- Controls -->
+            <section id="controls" class="controls hidden">
+                <!-- Loop Settings -->
+                <div class="loop-settings">
+                    <h3>Loop Settings</h3>
+                    <div class="time-inputs">
+                        <div class="input-group">
+                            <label for="startTime">Start Time (A):</label>
+                            <input type="text" id="startTime" placeholder="0 or 1:30" />
+                            <small>Format: seconds (90) or mm:ss (1:30)</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="endTime">End Time (B):</label>
+                            <input type="text" id="endTime" placeholder="Auto or 2:45" />
+                            <small>Format: seconds (165) or mm:ss (2:45)</small>
+                        </div>
+                    </div>
+                    <div class="loop-buttons">
+                        <button id="toggleLoop">Enable Loop</button>
+                        <button id="fullVideoLoop">Loop Full Video</button>
+                        <button id="resetLoop">Reset Loop</button>
+                    </div>
+                </div>
+
+                <!-- Playback Controls -->
+                <div class="playback-controls">
+                    <h3>Playback Controls</h3>
+                    <div class="control-buttons">
+                        <button id="playPause">Play</button>
+                        <button id="resetVideo">Reset Video</button>
+                    </div>
+                    <div class="time-display">
+                        <span>Current Time: <span id="currentTime">0:00</span></span>
+                        <span>Duration: <span id="duration">0:00</span></span>
+                    </div>
+                </div>
+
+                <!-- Keyboard Shortcuts -->
+                <div class="shortcuts">
+                    <h4>Keyboard Shortcuts:</h4>
+                    <p><kbd>Space</kbd> Play/Pause • <kbd>L</kbd> Toggle Loop • <kbd>R</kbd> Reset Loop</p>
+                </div>
+            </section>
+
+            <!-- Notes Section -->
+            <section id="notesSection" class="notes-section hidden">
+                <h3>📝 Notes</h3>
+                <textarea id="notes" placeholder="Take notes while watching the video..."></textarea>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Created by <strong>Pranithaa</strong> • <a href="mailto:pranithaa910@gmail.com">pranithaa910@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
